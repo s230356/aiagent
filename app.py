@@ -39,10 +39,10 @@ f = st.number_input(' 혈중 크레아틴 레벨 입력 ', value=0.0 )
 g = st.number_input(' 혈중 나트륨 레벨 입력 ', value=0.0 ) 
 h = st.number_input('성별 입력 ', value=0.0 ) 
 i = st.number_input('흡연 여부 입력 ', value=0.0 ) 
-c = st.selectbox('정보 수집에 동의하나요? (동의한다:0, 동의하지않는다:1', [0,1])
+j = st.selectbox('정보 수집에 동의하나요? (동의한다:0, 동의하지않는다:1', [0,1])
                                                             # 사용자가  0,1 중에 선택
 
 if st.button('점수예측'):            # 사용자가 '점수예측' 버튼을 누르면
-        input_data = [[a,b,c]]     # 사용자가 입력한 a,b,c 를 input_data에 저장하고
+        input_data = [[a,b,c,d,e,f,g,h,i]]     # 사용자가 입력한 a,b,c 를 input_data에 저장하고
         p = model.predict(input_data)         # model이 예측한 값을 p에 저장한다
         st.write('인공지능의 예측 점수는', p)
