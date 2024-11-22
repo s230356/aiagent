@@ -3,11 +3,11 @@ import streamlit as st
 
 # 1.기계학습 모델 파일 로드
 import joblib
-model = joblib.load('linear_regression_model.pkl')
+model = joblib.load(' ')
 
 # 2.모델 설명
-st.title('점수 예측 에이전트')
-st.subheader('모델 설명')
+st.title('빈혈증 예측 에이전트')
+st.subheader('빈혈증을 예측해줌')
 st.write(' - 기계학습 알고리즘 : 로지스틱 회귀 ')
 st.write(' - 학습 데이터 출처 :https://www.kaggle.com/code/sarahyoun/heart-failure-prediction')
 st.write(' - 훈련    데이터 : 210건')
@@ -28,7 +28,7 @@ with col3:
 
 # 4.모델 활용
 st.subheader('모델 활용')
-st.write('**** 다음을 입력하세요.. 인공지능이 당신의 점수를 알려드립니다! ')
+st.write('**** 다음을 입력하세요.. 인공지능이 당신의 빈혈증 여부를 알려드립니다! ')
 
 a = st.number_input(' 크레아틴카나제 검사 결과 입력 ', value=0)     
 b = st.number_input(' 당뇨병 여부 입력 ', value=0.0 )     
