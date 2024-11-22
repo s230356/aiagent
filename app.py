@@ -18,20 +18,20 @@ st.write(' - 인공지능 모델 정확도 : ***')
 col1, col2, col3 = st.columns(3)  
 with col1:
       st.subheader('데이터시각화1')
-      st.image('시각화1.png' )   # 이미지 불러오기
+      st.image('시각화1.png' )   
 with col2:
       st.subheader('데이터시각화2')
-      st.image('시각화2.png' )   # 이미지 불러오기
+      st.image('시각화2.png' )  
 with col3:
       st.subheader('데이터시각화3')
-      st.image('시각화3.png')   # 이미지 불러오기
+      st.image('시각화3.png')   
 
 # 4.모델 활용
 st.subheader('모델 활용')
 st.write('**** 다음을 입력하세요.. 인공지능이 당신의 점수를 알려드립니다! ')
 
-a = st.number_input(' 크레아틴카나제 검사 결과 입력 ', value=0)      #초기값은 0
-b = st.number_input(' 당뇨병 여부 입력 ', value=0.0 )     # 초기값은 0.0
+a = st.number_input(' 크레아틴카나제 검사 결과 입력 ', value=0)     
+b = st.number_input(' 당뇨병 여부 입력 ', value=0.0 )     
 c = st.number_input(' 박출 계수 입력 ', value=0.0 ) 
 d = st.number_input(' 고혈압 여부 입력 ', value=0.0 ) 
 e = st.number_input(' 혈소판 수 입력 ', value=0.0 ) 
@@ -40,9 +40,9 @@ g = st.number_input(' 혈중 나트륨 레벨 입력 ', value=0.0 )
 h = st.number_input('성별 입력 ', value=0.0 ) 
 i = st.number_input('흡연 여부 입력 ', value=0.0 ) 
 j = st.selectbox('정보 수집에 동의하나요? (동의한다:0, 동의하지않는다:1', [0,1])
-                                                            # 사용자가  0,1 중에 선택
+                                                            
 
-if st.button('점수예측'):            # 사용자가 '점수예측' 버튼을 누르면
-        input_data = [[a,b,c,d,e,f,g,h,i]]     # 사용자가 입력한 a,b,c 를 input_data에 저장하고
-        p = model.predict(input_data)         # model이 예측한 값을 p에 저장한다
+if st.button('점수예측'):           
+        input_data = [[a,b,c,d,e,f,g,h,i]]    
+        p = model.predict(input_data)         
         st.write('인공지능의 예측 점수는', p)
