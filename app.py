@@ -7,7 +7,7 @@ model = joblib.load('logistic_regression_model__1_.pkl')
 
 # 2.모델 설명
 st.title('당뇨병 예측 에이전트')
-st.subheader('당뇨병을 예측해줌')
+st.subheader('인공지능이 당뇨병을 예측')
 st.write(' - 기계학습 알고리즘 : 로지스틱 회귀 ')
 st.write(' - 학습 데이터 출처 :https://www.kaggle.com/code/sarahyoun/heart-failure-prediction')
 st.write(' - 훈련    데이터 : 210건')
