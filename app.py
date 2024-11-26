@@ -6,8 +6,8 @@ import joblib
 model = joblib.load('logistic_regression_model.pkl')
 
 # 2.모델 설명
-st.title('빈혈증 예측 에이전트')
-st.subheader('빈혈증을 예측해줌')
+st.title('당뇨병 예측 에이전트')
+st.subheader('당뇨병을 예측해줌')
 st.write(' - 기계학습 알고리즘 : 로지스틱 회귀 ')
 st.write(' - 학습 데이터 출처 :https://www.kaggle.com/code/sarahyoun/heart-failure-prediction')
 st.write(' - 훈련    데이터 : 210건')
@@ -37,7 +37,7 @@ st.subheader('모델 활용')
 st.write('**** 다음을 입력하세요.. 인공지능이 당신의 빈혈증 여부를 알려드립니다! ')
 
 a = st.number_input(' 크레아틴카나제 검사 결과 입력 ', value=0)     
-b = st.number_input(' 당뇨병 여부 입력 ', value=0.0 )     
+b = st.number_input(' 빈혈증 여부 입력 ', value=0.0 )     
 c = st.number_input(' 박출 계수 입력 ', value=0.0 ) 
 d = st.number_input(' 고혈압 여부 입력 ', value=0.0 ) 
 e = st.number_input(' 혈소판 수 입력 ', value=0.0 ) 
@@ -48,7 +48,7 @@ i = st.number_input('흡연 여부 입력 ', value=0.0 )
 j = st.selectbox('정보 수집에 동의하나요?(동의한다:0, 동의하지않는다:1)', [0,1])
                                                             
 
-if st.button('점수예측'):           
+if st.button('진단여부'):           
         input_data = [[a,b,c,d,e,f,g,h,i]]    
         p = model.predict(input_data)         
         st.write('인공지능의 예측 점수는', p)
