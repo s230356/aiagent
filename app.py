@@ -3,7 +3,7 @@ import streamlit as st
 
 # 1.기계학습 모델 파일 로드
 import joblib
-model = joblib.load('logistic_regression_model.pkl')
+model = joblib.load('logistic_regression_model__1_.pkl')
 
 # 2.모델 설명
 st.title('당뇨병 예측 에이전트')
