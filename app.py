@@ -45,7 +45,7 @@ f = st.number_input(' 혈중 나트륨 레벨 ', value=0 )
 g = st.number_input(' 성별 (여:0, 남:1)', value=0) 
 h = st.number_input('흡연 여부 (비흡연:0, 흡연:1) ', value=0) 
 i = st.number_input('나이 ', value=0 ) 
-j = st.selectbox('정보 수집에 동의하나요?(동의한다:0, 동의하지않는다:1)', [0,1])
+j = st.selectbox('개인정보 수집에 동의하나요?(동의한다:0, 동의하지않는다:1)', [0,1])
                                                             
 
 if st.button('진단결과'):           
