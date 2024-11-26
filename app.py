@@ -51,4 +51,4 @@ j = st.selectbox('정보 수집에 동의하나요?(동의한다:0, 동의하지
 if st.button('진단결과'):           
         input_data = [[a,b,c,d,e,f,g,h,i]]    
         p = model.predict(input_data)         
-        st.write('인공지능의 예측 점수는', p)
+        st.write('인공지능의 진단결과는', p)
